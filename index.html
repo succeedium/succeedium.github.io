@@ -11,64 +11,67 @@
     </style>
   </head>
   <body style="overflow:hidden">
-<div id="app">
-<v-app>
-  <v-navigation-drawer app>
-    <!-- -->
-  </v-navigation-drawer>
 
-  <v-app-bar app fixed flat color="white">
-    <!--<v-app-bar-nav-icon></v-app-bar-nav-icon>-->
+    <div id="app">
+  <v-app>
+    <v-navigation-drawer app>
+      <!-- -->
+    </v-navigation-drawer>
+
+    <v-app-bar app fixed flat color="white">
+      <!--<v-app-bar-nav-icon></v-app-bar-nav-icon>-->
       <v-icon large color="black">mdi-cube-outline</v-icon>
       <v-toolbar-title class="display-1 font-weight-medium">TeamOne</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn text small href="#about">About</v-btn>
       <v-btn href="#policy" text small>Privacy policy</v-btn>
-    <!-- -->
-  </v-app-bar>
+      <v-btn href="#contact" text small>Contact</v-btn>
+      <!-- -->
+    </v-app-bar>
 
-  <!-- Sizes your content based upon application components -->
-<v-main>
-        <v-container fluid>
-          <v-row
-            align="center"
-            justify="center"
-          >
-            <v-col cols="10">
-              <v-card flat>
-                <div id="about" class="text-h2 my-4">About
-                </div>
-                <div class="text-justify">
-                  <p><b>TeamOne</b> is a Google Sheets add-on for IBM Planning Analytics. Similar to TM1 Perspectives it allows to read and write data from your TM1 cubes, but directly in Google Sheets. It also contains a small sidebar which gives you a full control on your TM1 servers, including:</p>
-                  <p><ul>
-                  <li>Session dashboard (similar to tm1top, but with a nice formatted view</li>
-                    <li>Security management (users and groups assignments)</li>
-                    <li>TI process execution</li>
-                    <li>Deployment (from model A to model B without TM1 server restart)</li>
-                  </ul></p>
-                  <p>If you install <b>TeamOne agent</b> somewhere in your network, this feature list will go on:</p>
-                  <p>
-                    <ul>
-                      <li>Server health status (CPU, RAM and disk usage)</li>
-                      <li>File uploads to TM1 server</li>
-                      <li>TI code version control (with ability to compare the changes)</li>
-                      <li>Automated model documentation</li>
-                      <li>TM1 performance testing</li>
-                    </ul>
-                  </p>
-                  <p>You can easily automate your routines such as: opening and closing fiscal periods, adding new users, </p>
-                </div>
-              </v-card>
-            </v-col>
-          </v-row>
-    </v-container>
-  </v-main>
+    <!-- Sizes your content based upon application components -->
+    <v-main>
+      <v-container fluid>
+        <v-row justify="center">
+          <v-col cols="10">
+            <v-card flat class="text-justify">
+              <p id="about" class="text-h2 my-4">About
+              </p>
+              <p><b>TeamOne</b> is a Google Sheets add-on for IBM Planning Analytics. Similar to TM1 Perspectives it allows to read and write data from your TM1 cubes, but directly in Google Sheets. It also contains a small sidebar which gives you a full control on your TM1 servers, including:</p>
+              <p><ul>
+              <li>Session dashboard (similar to tm1top, but with a nice formatted view</li>
+              <li>Security management (users and groups assignments)</li>
+              <li>TI process execution</li>
+              <li>Deployment (from model A to model B without TM1 server restart)</li>
+              </ul></p>
+            <p>If you install <b>TeamOne agent</b> somewhere in your network, this feature list will go on:</p>
+            <p>
+            <ul>
+              <li>Server health status (CPU, RAM and disk usage)</li>
+              <li>File uploads to TM1 server</li>
+              <li>TI code version control (with ability to compare the changes)</li>
+              <li>Automated model documentation</li>
+              <li>TM1 performance testing</li>
+            </ul>
+            </p>
+          <p>You can easily automate your routines such as: opening and closing fiscal periods, adding new users, </p>
+          <p id="policy" class="text-h2 my-4">Privacy policy
+          </p>
+          <p><b>TeamOne</b> Google Sheets add-on does not store any data or personal information, all the data is retrieved directly from your TM1 server REST API or through <b>TeamOne agent</b> and is either displayed in a sidebar or loaded on a Google Sheet tab</p>
+          <p id="contact" class="text-h2 my-4">Contact us
+          </p>
+          <p>If you have any questions or proposals please conact us at <a href="mailto:info@succeedium.com">info@succeedium.com</a></b> 
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</v-main>
 
-  <v-footer app>
-    <!-- -->
-  </v-footer>
+<v-footer app>
+  <span>Succeedium®  <b>TeamOne</b> 2020</span>
+</v-footer>
 </v-app>
-  
+
 </div>
 
   </body>
