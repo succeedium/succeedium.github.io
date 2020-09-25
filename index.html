@@ -1,1 +1,62 @@
-Hello <b>test</b>
+<!DOCTYPE html>
+<html style="overflow:hidden">
+  <head>
+    <base target="_top">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <style>
+      .v-bottom-sheet.v-dialog{overflow-y:auto}
+    </style>
+  </head>
+  <body style="overflow:hidden">
+<div id="app">
+
+<v-app>
+  <v-navigation-drawer app>
+    <!-- -->
+  </v-navigation-drawer>
+
+  <v-app-bar app>
+    <!-- -->
+  </v-app-bar>
+
+  <!-- Sizes your content based upon application components -->
+  <v-main>
+
+    <!-- Provides the application the proper gutter -->
+    <v-container fluid>
+
+      <!-- If using vue-router -->
+      <router-view></router-view>
+    </v-container>
+  </v-main>
+
+  <v-footer app>
+    <!-- -->
+  </v-footer>
+</v-app>
+  
+</div>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+var vm = new Vue({
+  el: '#app',
+  vuetify: new Vuetify(),
+  data: () => ({
+    tab: 'settings'
+  }),
+  mounted(){
+    //this.cfgRefresh();
+  },
+  methods:{
+    //log:function(mssg){},
+  }
+});
+  </script>
+</html>
