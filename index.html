@@ -49,46 +49,6 @@
         </v-carousel>
       <v-container fluid>
         <v-row justify="center">
-          <v-col cols="10">
-            <v-card flat class="text-justify">
-              <v-list two-line>
-<style> html{overflow-y: auto}</style>
-<div id="app">
-  <v-app>
-    <v-app-bar app fixed flat color="white">
-      <img class="mr-3" width="40" src='https://succeedium.github.io/img/logo_bw.png'/>
-      <!--<v-app-bar-nav-icon></v-app-bar-nav-icon>-->
-      <!--<v-icon large color="black">mdi-cube-outline</v-icon>-->
-      <v-toolbar-title class="display-1 font-weight-medium">Succeedium</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn text small href="#about">About</v-btn>
-      <v-menu open-on-hover offset-y>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn v-bind="attrs" v-on="on" text small href="#about">Products<v-icon right dark>mdi-chevron-down</v-icon></v-btn>
-        </template>
-        <v-list dense>
-          <v-list-item link href="/teamone/"><v-list-item-title>TeamOne</v-list-item-title></v-list-item>
-          <v-list-item link href="/tm1framework/"><v-list-item-title>TM1 Framework</v-list-item-title></v-list-item>
-          <v-list-item link href="/tm1exceltools/"><v-list-item-title>TM1 Excel Tools</v-list-item-title></v-list-item>
-        </v-list>
-      </v-menu>
-      <v-btn href="#contact" text small>Contact</v-btn>
-      <!-- -->
-    </v-app-bar>
-    <v-main>
-        <v-carousel cycle :show-arrows="false" hide-delimiter-background delimiter-icon="mdi-minus" height="300">
-          <v-carousel-item v-for="(slide, i) in slides":key="i">
-            <v-sheet color="" height="100%" >
-              <v-row class="fill-height" align="center" justify="center">
-                <div class="display-3">
-                  {{ slide }}
-                </div>
-              </v-row>
-            </v-sheet>
-          </v-carousel-item>
-        </v-carousel>
-      <v-container fluid>
-        <v-row justify="center">
           <v-card flat class="text-justify" style="max-width: 800px">
             <v-list two-line>
               <v-list-item>
