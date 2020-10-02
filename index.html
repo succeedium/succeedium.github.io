@@ -52,28 +52,66 @@
           <v-col cols="10">
             <v-card flat class="text-justify">
               <v-list two-line>
-                <v-list-item>
-                  <v-list-item-avatar>
-                    <!--<v-img src="https://succeedium.github.io/img/logo_bw.png"></v-img>-->
-                    <v-icon large color="rgba(0,0,0,.87)">mdi-cube-outline</v-icon>
-                  </v-list-item-avatar>
-                  <v-list-item-content>
-                    <v-list-item-title><b>TeamOne</b></v-list-item-title>
-                    <v-list-item-subtitle>By Succeedium</v-list-item-subtitle>
-                  </v-list-item-content>
-                  <v-list-item-action>
-                    <v-btn text>Version 1.2<v-icon right>mdi-open-in-new</v-icon>
-                    </v-btn>
-                    <!--<v-switch v-model="cycle" label="Cycle Slides" inset></v-switch>-->
-                  </v-list-item-action>
-                </v-list-item>
-              </v-list>
-              <p id="about" class="mt-4"><b>Succeedium TeamOne</b> is a Google Sheets add-on for IBM Planning Analytics. Similar to TM1 Perspectives it allows to read and write data from your TM1 cubes, but directly in Google Sheets. It also contains a small sidebar which gives you a full control on your TM1 servers, including: user sessions dashboard (similar to tm1top, but with a nice formatted view), security management (users and groups assignments), TI process execution, deployment (from model A to model B without TM1 server restart), server health status (CPU, RAM and disk usage), server message log, file uploads to TM1 server, TI code version control (with ability to compare the changes), automated model documentation, performance testing.</p>
-              <p class="mt-4"><b>Succeedium TM1 Framework</b> is a set of TM1 TurboIntegrator processes and Applications to spead up your TM1 development and automate your TM1 model administration</p>
-              <p class="mt-4"><b>Succeedium TM1 Excel Tools</b> is an Excel add-on for IBM Planning Analytics that allows to manage your TM1 Perspectives reports including a global search and replace and deployments. You can also search your TM1 code (TurboIntegrator processes and cube calculation rules) as well as deploy TM1 objects from model A to model B directly from Excel without TM1 server restart.</p>
-        </v-card>
-      </v-col>
-    </v-row>
+<style> html{overflow-y: auto}</style>
+<div id="app">
+  <v-app>
+    <v-app-bar app fixed flat color="white">
+      <img class="mr-3" width="40" src='https://succeedium.github.io/img/logo_bw.png'/>
+      <!--<v-app-bar-nav-icon></v-app-bar-nav-icon>-->
+      <!--<v-icon large color="black">mdi-cube-outline</v-icon>-->
+      <v-toolbar-title class="display-1 font-weight-medium">Succeedium</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn text small href="#about">About</v-btn>
+      <v-menu open-on-hover offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn v-bind="attrs" v-on="on" text small href="#about">Products<v-icon right dark>mdi-chevron-down</v-icon></v-btn>
+        </template>
+        <v-list dense>
+          <v-list-item link href="/teamone/"><v-list-item-title>TeamOne</v-list-item-title></v-list-item>
+          <v-list-item link href="/tm1framework/"><v-list-item-title>TM1 Framework</v-list-item-title></v-list-item>
+          <v-list-item link href="/tm1exceltools/"><v-list-item-title>TM1 Excel Tools</v-list-item-title></v-list-item>
+        </v-list>
+      </v-menu>
+      <v-btn href="#contact" text small>Contact</v-btn>
+      <!-- -->
+    </v-app-bar>
+    <v-main>
+        <v-carousel cycle :show-arrows="false" hide-delimiter-background delimiter-icon="mdi-minus" height="300">
+          <v-carousel-item v-for="(slide, i) in slides":key="i">
+            <v-sheet color="" height="100%" >
+              <v-row class="fill-height" align="center" justify="center">
+                <div class="display-3">
+                  {{ slide }}
+                </div>
+              </v-row>
+            </v-sheet>
+          </v-carousel-item>
+        </v-carousel>
+      <v-container fluid>
+        <v-row justify="center">
+          <v-card flat class="text-justify" style="max-width: 800px">
+            <v-list two-line>
+              <v-list-item>
+                <v-list-item-avatar>
+                  <!--<v-img src="https://succeedium.github.io/img/logo_bw.png"></v-img>-->
+                  <v-icon large color="rgba(0,0,0,.87)">mdi-cube-outline</v-icon>
+                </v-list-item-avatar>
+                <v-list-item-content>
+                  <v-list-item-title><b>TeamOne</b></v-list-item-title>
+                  <v-list-item-subtitle>By Succeedium</v-list-item-subtitle>
+                </v-list-item-content>
+                <v-list-item-action>
+                  <v-btn text>Version 1.2<v-icon right>mdi-open-in-new</v-icon>
+                  </v-btn>
+                  <!--<v-switch v-model="cycle" label="Cycle Slides" inset></v-switch>-->
+                </v-list-item-action>
+              </v-list-item>
+            </v-list>
+            <p id="about" class="mt-4"><b>Succeedium TeamOne</b> is a Google Sheets add-on for IBM Planning Analytics. Similar to TM1 Perspectives it allows to read and write data from your TM1 cubes, but directly in Google Sheets. It also contains a small sidebar which gives you a full control on your TM1 servers, including: user sessions dashboard (similar to tm1top, but with a nice formatted view), security management (users and groups assignments), TI process execution, deployment (from model A to model B without TM1 server restart), server health status (CPU, RAM and disk usage), server message log, file uploads to TM1 server, TI code version control (with ability to compare the changes), automated model documentation, performance testing.</p>
+            <p class="mt-4"><b>Succeedium TM1 Framework</b> is a set of TM1 TurboIntegrator processes and Applications to spead up your TM1 development and automate your TM1 model administration</p>
+            <p class="mt-4"><b>Succeedium TM1 Excel Tools</b> is an Excel add-on for IBM Planning Analytics that allows to manage your TM1 Perspectives reports including a global search and replace and deployments. You can also search your TM1 code (TurboIntegrator processes and cube calculation rules) as well as deploy TM1 objects from model A to model B directly from Excel without TM1 server restart.</p>
+          </v-card>
+        </v-row>
   </v-container>
 </v-main>
 
