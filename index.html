@@ -15,8 +15,8 @@
 <style> html{overflow-y: auto}</style>
 <div id="app">
   <v-app>
-    <v-app-bar app fixed flat color="white">
-      <img class="mr-3" width="40" src='https://succeedium.github.io/img/logo_bw.png'/>
+    <v-app-bar app fixed flat dark color="">
+      <img class="mr-3" width="40" src='https://succeedium.github.io/img/logo_w.png'/>
       <!--<v-app-bar-nav-icon></v-app-bar-nav-icon>-->
       <!--<v-icon large color="black">mdi-cube-outline</v-icon>-->
       <v-toolbar-title class="display-1 font-weight-medium">Succeedium</v-toolbar-title>
@@ -33,12 +33,11 @@
         </v-list>
       </v-menu>
       <v-btn href="#contact" text small>Contact</v-btn>
-      <!-- -->
     </v-app-bar>
     <v-main>
         <v-carousel cycle :show-arrows="false" hide-delimiter-background delimiter-icon="mdi-minus" height="300">
           <v-carousel-item v-for="(slide, i) in slides":key="i">
-            <v-sheet color="" height="100%" >
+            <v-sheet light height="100%" >
               <v-row class="fill-height" align="center" justify="center">
                 <div class="display-3">
                   {{ slide }}
@@ -50,25 +49,38 @@
       <v-container fluid>
         <v-row justify="center">
           <v-card flat class="text-justify" style="max-width: 800px">
-            <v-list two-line>
-              <v-list-item>
-                <v-list-item-avatar>
-                  <!--<v-img src="https://succeedium.github.io/img/logo_bw.png"></v-img>-->
-                  <v-icon large color="rgba(0,0,0,.87)">mdi-cube-outline</v-icon>
-                </v-list-item-avatar>
-                <v-list-item-content>
+            <v-divider></v-divider>
+            <v-list two-line><v-list-item>
+                <v-list-item-avatar><!--<v-img src="https://succeedium.github.io/img/logo_bw.png"></v-img>--><v-icon large color="rgba(0,0,0,.87)">mdi-google-spreadsheet</v-icon></v-list-item-avatar>
+              <v-list-item-content>
                   <v-list-item-title><b>TeamOne</b></v-list-item-title>
                   <v-list-item-subtitle>By Succeedium</v-list-item-subtitle>
                 </v-list-item-content>
-                <v-list-item-action>
-                  <v-btn text>Version 1.2<v-icon right>mdi-open-in-new</v-icon>
-                  </v-btn>
-                  <!--<v-switch v-model="cycle" label="Cycle Slides" inset></v-switch>-->
-                </v-list-item-action>
+                <v-list-item-action><v-btn text>Version 1.2<v-icon right>mdi-open-in-new</v-icon></v-btn></v-list-item-action>
               </v-list-item>
             </v-list>
             <p id="about" class="mt-4"><b>Succeedium TeamOne</b> is a Google Sheets add-on for IBM Planning Analytics. Similar to TM1 Perspectives it allows to read and write data from your TM1 cubes, but directly in Google Sheets. It also contains a small sidebar which gives you a full control on your TM1 servers, including: user sessions dashboard (similar to tm1top, but with a nice formatted view), security management (users and groups assignments), TI process execution, deployment (from model A to model B without TM1 server restart), server health status (CPU, RAM and disk usage), server message log, file uploads to TM1 server, TI code version control (with ability to compare the changes), automated model documentation, performance testing.</p>
-            <p class="mt-4"><b>Succeedium TM1 Framework</b> is a set of TM1 TurboIntegrator processes and Applications to spead up your TM1 development and automate your TM1 model administration</p>
+            <v-divider inset></v-divider>
+            <v-list two-line><v-list-item>
+                <v-list-item-avatar><!--<v-img src="https://succeedium.github.io/img/logo_bw.png"></v-img>--><v-icon large color="rgba(0,0,0,.87)">mdi-cube-outline</v-icon></v-list-item-avatar>
+              <v-list-item-content>
+                  <v-list-item-title><b>TeamOne Framework</b></v-list-item-title>
+                  <v-list-item-subtitle>By Succeedium</v-list-item-subtitle>
+                </v-list-item-content>
+                <v-list-item-action><v-btn text>Version 3.2<v-icon right>mdi-open-in-new</v-icon></v-btn></v-list-item-action>
+              </v-list-item>
+            </v-list>
+            <p class="mt-4"><b>Succeedium TM1 Framework</b> is a set of TM1 TurboIntegrator processes and Applications to spead up your TM1 development and automate your TM1 model administration. It comes with a naming convention and TM1 development guide, bringing clarity and order to your TM1 model. Besides reusable processes for creating and updating TM1 cubes, dimensions, hierarchies, views and subsets, it includes ready to use tools to work with files (including Excel file import), automated model backups, deployment and documentation.</p>
+            <v-divider></v-divider>
+            <v-list two-line><v-list-item>
+                <v-list-item-avatar><!--<v-img src="https://succeedium.github.io/img/logo_bw.png"></v-img>--><v-icon large color="rgba(0,0,0,.87)">mdi-file-excel-outline</v-icon></v-list-item-avatar>
+              <v-list-item-content>
+                  <v-list-item-title><b>TeamOne Excel</b></v-list-item-title>
+                  <v-list-item-subtitle>By Succeedium</v-list-item-subtitle>
+                </v-list-item-content>
+                <v-list-item-action><v-btn text>Version 3.1<v-icon right>mdi-open-in-new</v-icon></v-btn></v-list-item-action>
+              </v-list-item>
+            </v-list>
             <p class="mt-4"><b>Succeedium TM1 Excel Tools</b> is an Excel add-on for IBM Planning Analytics that allows to manage your TM1 Perspectives reports including a global search and replace and deployments. You can also search your TM1 code (TurboIntegrator processes and cube calculation rules) as well as deploy TM1 objects from model A to model B directly from Excel without TM1 server restart.</p>
           </v-card>
         </v-row>
