@@ -12,7 +12,11 @@
   </head>
   <body>
   
-<style> html{overflow-y: auto}</style>
+<style>
+  html{overflow-y: auto !important}
+  body::-webkit-scrollbar {width: 8px}
+  body::-webkit-scrollbar-track {background: transparent;}
+body::-webkit-scrollbar-thumb {background-color: #444; border-radius: 20px}</style>
 <div id="app">
   <v-app>
     <v-app-bar app fixed flat dark color="">
@@ -34,7 +38,7 @@
       </v-menu>
       <v-btn href="#contact" text small>Contact</v-btn>
     </v-app-bar>
-    <v-main>
+    <v-main style="overflow-y:auto !important; height: 500px">
         <v-carousel cycle :show-arrows="false" hide-delimiter-background delimiter-icon="mdi-minus" height="300">
           <v-carousel-item v-for="(slide, i) in slides":key="i">
             <v-sheet light height="100%" >
@@ -60,7 +64,7 @@
               </v-list-item>
             </v-list>
             <p id="about" class="mt-4"><b>Succeedium TeamOne</b> is a Google Sheets add-on for IBM Planning Analytics. Similar to TM1 Perspectives it allows to read and write data from your TM1 cubes, but directly in Google Sheets. It also contains a small sidebar which gives you a full control on your TM1 servers, including: user sessions dashboard (similar to tm1top, but with a nice formatted view), security management (users and groups assignments), TI process execution, deployment (from model A to model B without TM1 server restart), server health status (CPU, RAM and disk usage), server message log, file uploads to TM1 server, TI code version control (with ability to compare the changes), automated model documentation, performance testing.</p>
-            <v-divider inset></v-divider>
+            <v-divider></v-divider>
             <v-list two-line><v-list-item>
                 <v-list-item-avatar><!--<v-img src="https://succeedium.github.io/img/logo_bw.png"></v-img>--><v-icon large color="rgba(0,0,0,.87)">mdi-cube-outline</v-icon></v-list-item-avatar>
               <v-list-item-content>
@@ -92,7 +96,6 @@
 </v-footer>
 </v-app>
 </div>
-
 
 </body>
   <script>
