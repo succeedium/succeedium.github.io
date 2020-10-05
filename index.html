@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="overflow:hidden">
+<html>
   <head>
     <base target="_top">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
@@ -16,7 +16,7 @@
   html{overflow-y: auto !important}
   .v-main::-webkit-scrollbar {width: 8px}
   .v-main::-webkit-scrollbar-track {background: #EEE;}
-.v-main::-webkit-scrollbar-thumb {background-color: #444; border-radius: 20px}</style>
+  .v-main::-webkit-scrollbar-thumb {background-color: #444; border-radius: 20px}</style>
 <div id="app">
   <v-app>
     <v-app-bar app fixed flat dark color="">
@@ -38,7 +38,7 @@
       </v-menu>
       <v-btn href="#contact" text small>Contact</v-btn>
     </v-app-bar>
-    <v-main style="overflow-y:auto !important; height: 500px">
+    <v-main style="padding: 10px; overflow-y:auto !important; height: 500px">
         <v-carousel cycle :show-arrows="false" hide-delimiter-background delimiter-icon="mdi-minus" height="300">
           <v-carousel-item v-for="(slide, i) in slides":key="i">
             <v-sheet light height="100%" >
@@ -74,7 +74,7 @@
                 <v-list-item-action><v-btn text>Version 3.2<v-icon right>mdi-open-in-new</v-icon></v-btn></v-list-item-action>
               </v-list-item>
             </v-list>
-            <p class="mt-4"><b>Succeedium TM1 Framework</b> is a set of TM1 TurboIntegrator processes and Applications to spead up your TM1 development and automate your TM1 model administration. It comes with a naming convention and TM1 development guide, bringing clarity and order to your TM1 model. Besides reusable processes for creating and updating TM1 cubes, dimensions, hierarchies, views and subsets, it includes ready to use tools to work with files (including Excel file import), automated model backups, deployment and documentation.</p>
+            <p class="mt-4"><b>Succeedium TM1 Framework</b> is a set of TM1 TurboIntegrator processes and Applications to spead up TM1 development and automate your TM1 model administration. It comes with a naming convention and development guide, bringing clarity and order to your TM1 model. Besides reusable processes for creating and updating TM1 cubes, dimensions, hierarchies, views and subsets, it includes ready to use tools to work with files (including Excel file import), automated model backups, deployment and documentation.</p>
             <v-divider></v-divider>
             <v-list two-line><v-list-item>
                 <v-list-item-avatar><!--<v-img src="https://succeedium.github.io/img/logo_bw.png"></v-img>--><v-icon large color="rgba(0,0,0,.87)">mdi-file-excel-outline</v-icon></v-list-item-avatar>
