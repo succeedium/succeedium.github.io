@@ -1,0 +1,1 @@
+import{o as e,c as r,d as a}from"./app.7853f4dd.js";const t='{"title":"FAQ","description":"","frontmatter":{},"headers":[{"level":2,"title":"FAQ","slug":"faq"}],"relativePath":"faq.md","lastUpdated":1620188039148}',s={},o=a('',9);s.render=function(a,t,s,n,d,i){return e(),r("div",null,[o])};export default s;export{t as __pageData};
