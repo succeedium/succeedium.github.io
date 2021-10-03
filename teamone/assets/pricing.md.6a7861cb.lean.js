@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a,d as r}from"./app.79d3f687.js";const u='{"title":"Pricing","description":"","frontmatter":{},"relativePath":"pricing.md","lastUpdated":1632713473726}',n={},i=r('',9),l=[i];function s(c,d,o,p,h,y){return a(),e("div",null,l)}var f=t(n,[["render",s]]);export{u as __pageData,f as default};
