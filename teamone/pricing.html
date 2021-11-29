@@ -70,7 +70,7 @@
         <span class="nav-item"><a class="nav-item-link" href="/teamone/">About</a></span>
         <span class="nav-item"><a class="nav-item-link" href="/teamone/doc/">Doc</a></span>
         <span class="nav-item"><a class="nav-item-link" href="#" style="border-bottom-color: #3eaf7c">Pricing</a></span>
-        <span class="nav-item"><a class="nav-item-link" href="/teamone/faq">Doc</a></span>
+        <span class="nav-item"><a class="nav-item-link" href="/teamone/faq">FAQ</a></span>
         <span class="nav-item"><a class="nav-item-link" href="/teamone/contact">Contact</a></span>
       </span>
     </v-app-bar>
@@ -437,7 +437,8 @@
       return val.toLocaleString("en-US") + ' %'
     },
     formatDays(val){
-      return Math.ceil(val) + ' days'
+      var res = Math.ceil(val);
+      return res + (res>1?' days':' day')
     }
   },
   mounted () {
