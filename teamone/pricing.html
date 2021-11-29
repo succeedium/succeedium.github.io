@@ -63,7 +63,7 @@
 <div id="app" v-cloak>
   <v-app id="inspire">
     <v-app-bar app color="white" flat style="border-bottom: 1px solid rgba(0,0,0,.12) !important">
-      <v-app-bar-nav-icon @click.stop="mobileMenu = !mobileMenu"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="mobileMenu = !mobileMenu" v-show="!$vuetify.breakpoint.smAndUp"></v-app-bar-nav-icon>
       <a href="https://succeedium.com/teamone/"><img class="mr-3" src="https://succeedium.com/teamone/img/logo.png" height="40"/></a>
       <v-spacer></v-spacer>
       <span v-show="$vuetify.breakpoint.smAndUp">
