@@ -385,19 +385,13 @@
       val = calcUserHours * this.userRate * calcYears;
       this.costBreakdown[4]['cost'] = val;
       this.costBreakdown[4]['savings'] = val * 0.75;
-      //alert(payback);
       this.calcCost = price * this.calcYears;
       this.calcSavings = savings;
       this.calcPayback = payback;
+      console.log(payback);
       this.paybackUnit = payback==1?'month':'months';
       this.calcRoi = roi;
       
-      /*
-      this.cost = formatter.format(cost);
-      this.savings = formatter.format(savings);
-      this.paybackPeriod = paybackPeriod;
-      this.roi = roi+" %";
-      */
     },
     setCost(val){
       const obj = { n: this.cost }
