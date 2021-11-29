@@ -5,21 +5,447 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Pricing |  </title>
     <meta name="description" content="TeamOne IBM Planning Analytics add-on for Google Sheets">
-    <link rel="stylesheet" href="/teamone/assets/style.0892cab4.css">
-    <link rel="modulepreload" href="/teamone/assets/Home.656e026e.js">
-    <link rel="modulepreload" href="/teamone/assets/AlgoliaSearchBox.74286ddb.js">
-    <link rel="modulepreload" href="/teamone/assets/app.1480465d.js">
-    <link rel="modulepreload" href="/teamone/assets/pricing.md.ed73b1ef.lean.js">
-    <link rel="modulepreload" href="/teamone/assets/app.1480465d.js">
-    <script src="https://www.googletagmanager.com/gtag/js?id=G-KB4H08LH1S"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vuetify@2.6.0/dist/vuetify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.6.0/dist/vuetify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-KB4H08LH1S');</script>
-    <meta name="twitter:title" content="Pricing |  ">
-    <meta property="og:title" content="Pricing |  ">
+    <style>
+.nav-item{
+  display: inine-block;
+  padding: 6px 15px;
+}
+.nav-item-link{
+  border-bottom: 2px solid transparent;
+  padding: 0;
+  line-height: 24px;
+  font-size: .9rem;
+  font-weight: 500;
+  color: #2c3e50 !important;
+  white-space: nowrap; 
+  text-decoration: none;
+  font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family-mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.nav-item-link:hover{border-bottom-color: #3eaf7c}
+.ip-plan {
+  border: solid 1px #e0e0e0 !important;
+  margin-top:40px;
+  max-width: 300px !important;
+}
+.ip-plan-price{
+  display: block;
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 8px;
+  margin-top: 28px;
+  white-space: nowrap;
+}
+.ip-highligh-plan{
+  height:12px;
+  position: absolute;
+  width: calc(100% + 2px);
+  left:0px;
+  top: -12px;
+}
+.card-val{font-size: 2.8rem; font-weight: 300; line-height: 5rem; letter-spacing: 0.01rem;}
+.card-val-mob{font-size: 24px; line-height: 0.5rem;}
+.card-unit{font-size: 26px}
+.card-unit-mob{font-size: 20px}
+[v-cloak] > * { display:none}
+    </style>
   </head>
   <body>
-    <div id="app"><!--[--><div class="no-sidebar theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/teamone/" aria-label=" , back to home" data-v-675d8756 data-v-4a583abe><img class="logo" src="/teamone/img/logo.png" alt="Logo" data-v-4a583abe>  </a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><nav class="nav-links" data-v-675d8756 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/teamone/" data-v-b8818f8c>About <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/teamone/doc/" data-v-b8818f8c>Doc <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/teamone/pricing" data-v-b8818f8c>Pricing <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/teamone/faq" data-v-b8818f8c>FAQ <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/teamone/contact" data-v-b8818f8c>Contact <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--[--><div class="algolia-search-box" id="docsearch"></div><!--]--><!--]--></header><aside class="sidebar" data-v-83e92a68><nav class="nav-links nav" data-v-83e92a68 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/teamone/" data-v-b8818f8c>About <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/teamone/doc/" data-v-b8818f8c>Doc <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/teamone/pricing" data-v-b8818f8c>Pricing <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/teamone/faq" data-v-b8818f8c>FAQ <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/teamone/contact" data-v-b8818f8c>Contact <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><!----><!--[--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><h1 id="pricing" tabindex="-1">Pricing <a class="header-anchor" href="#pricing" aria-hidden="true">#</a></h1><p>You can buy either an individual or a domain <strong>TeamOne</strong> license</p><table><thead><tr><th style="text-align:left;"></th><th style="text-align:center;">Individual license</th><th style="text-align:center;">Domain license</th></tr></thead><tbody><tr><td style="text-align:left;">Number of users</td><td style="text-align:center;">1</td><td style="text-align:center;">Unlimited<br>(any user of the licensed domain)</td></tr><tr><td style="text-align:left;">Free updates</td><td style="text-align:center;">✓</td><td style="text-align:center;">✓</td></tr><tr><td style="text-align:left;">Support</td><td style="text-align:center;">email</td><td style="text-align:center;">email + audio\video call</td></tr><tr><td style="text-align:left;">Consulting hours included</td><td style="text-align:center;">Not available</td><td style="text-align:center;">1 hr.</td></tr><tr><td style="text-align:left;">Price</td><td style="text-align:center;"><b>$2500</b> / year<br><a href="https://buy.stripe.com/3csaHOezp5p32zufZ0" target="_blank" rel="noopener noreferrer">Pay with a card</a></td><td style="text-align:center;"><b>$25000</b> / year<br><a href="https://buy.stripe.com/aEU4jq0Iz4kZ1vqbIJ" target="_blank" rel="noopener noreferrer">Pay with a card</a></td></tr></tbody></table><p>All prices are in USD. Support is reffered to any questions about TeamOne. Consulting hours assume questions about your TM1 model or any general TM1 questions and how-to.</p><h1 id="save-2-with-alternative-payment-options" tabindex="-1">Save 2% with alternative payment options <a class="header-anchor" href="#save-2-with-alternative-payment-options" aria-hidden="true">#</a></h1><p>We accept the following payment methods:</p><ul><li>wire transfer</li><li>crypto (bitcoin and etherium only)</li><li>e-interact transfers (Canada only)</li></ul><p>Paying with any method above you will receive a 2% discount. Please contact us at <a href="mailto:info@succeedium.com">info@succeedium.com</a> for the payment instructions. Once we confirm your payment is processed, the license will be activated and you can start using TeamOne add-on.</p><hr><p>Succeedium® TeamOne 2021 | <a href="./privacy.html">Privacy Policy</a> | <a href="./terms.html">Terms Of Service</a></p></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><!----><!--[--><!--]--></div></main></div><!----><!--]--></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"contact.md\":\"fdea62c9\",\"doc_functions.md\":\"dc12a87c\",\"doc_index.md\":\"915edf5d\",\"doc_roadmap.md\":\"4c559ccd\",\"doc_system.md\":\"1c4aa05c\",\"doc_tasks.md\":\"f0feb79e\",\"doc_users.md\":\"1167afa1\",\"doc_version.md\":\"79b9ac81\",\"faq.md\":\"1d131b44\",\"index.md\":\"fa7c9380\",\"pricing.md\":\"ed73b1ef\",\"privacy.md\":\"729d4bb5\",\"terms.md\":\"4ca482c3\"}")</script>
-    <script type="module" async src="/teamone/assets/app.1480465d.js"></script>
+<div id="app" v-cloak>
+  <v-app id="inspire">
+    <v-app-bar app color="white" flat style="border-bottom: 1px solid rgba(0,0,0,.12) !important">
+      <v-app-bar-nav-icon @click.stop="mobileMenu = !mobileMenu"></v-app-bar-nav-icon>
+      <a href="https://succeedium.com/teamone/"><img class="mr-3" src="https://succeedium.com/teamone/img/logo.png" height="40"/></a>
+      <v-spacer></v-spacer>
+      <span v-show="$vuetify.breakpoint.smAndUp">
+        <span class="nav-item"><a class="nav-item-link" href="/teamone/">About</a></span>
+        <span class="nav-item"><a class="nav-item-link" href="/teamone/doc/">Doc</a></span>
+        <span class="nav-item"><a class="nav-item-link" href="#" style="border-bottom-color: #3eaf7c">Pricing</a></span>
+        <span class="nav-item"><a class="nav-item-link" href="/teamone/faq">Doc</a></span>
+        <span class="nav-item"><a class="nav-item-link" href="/teamone/contact">Contact</a></span>
+      </span>
+    </v-app-bar>
+<v-navigation-drawer v-model="mobileMenu" absolute temporary>
+      <v-list nav dense>
+        <v-list-item><img class="mr-3" src="https://succeedium.com/teamone/img/logo.png" height="40"/></v-list-item>
+        <v-divider class="mb-4"></v-divider>
+        <v-list-item href="/teamone/"><v-list-item-title>About</v-list-item-title></v-list-item>
+        <v-list-item href="/teamone/doc/"><v-list-item-title>Doc</v-list-item-title></v-list-item>
+        <v-list-item href="/teamone/faq"><v-list-item-title>FAQ</v-list-item-title></v-list-item>
+        <v-list-item href="/teamone/contact/"><v-list-item-title>Contact</v-list-item-title></v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <v-main>
+      <v-container :class="$vuetify.breakpoint.smAndUp?'':'pa-0'">
+        <v-row justify="center">
+          <v-card flat class="rounded-0 xs6 mb-3 flex ip-plan" v-for="(plan, planIndex) in plans" :style="`order:${order(plan)}; z-index:${plan.highlight ? 3 : 1}`" :class="{'elevation-10': plan.highlight}">
+            <v-card flat v-if="plan.highlight" ma-0 pa-0 class="rounded-0 deep-purple ip-highligh-plan">
+              <v-flex shrink text-xs-center></v-flex>
+            </v-card>
+            <v-card-text>
+              <v-flex pa-0><h2 class="headline d-inline">{{plan.title}}</h2><v-btn small depressed @click="showPlanDetails=!showPlanDetails" class="float-right">
+                Details<v-icon>{{showPlanDetails?'mdi-chevron-up':'mdi-chevron-down'}}</v-icon>
+                </v-btn></v-flex>
+              <v-flex mt-1 v-show="$vuetify.breakpoint.smAndUp">{{plan.tagline}}</v-flex>
+              <v-flex pa-0 class="ip-plan-price info--text font-weight-light">{{plan.price}}</v-flex>
+              <v-flex pa-0 class="grey--text">USD / year</v-flex>
+              <v-flex pa-0 mt-4>
+                <v-btn v-if="plan.highlight" depressed large color="deep-purple" class="ma-0 white--text" :href="plan.buyLink" target="_blank">BUY</v-btn>
+                <v-btn outlined v-else="!plan.highlight" depressed large color="deep-purple" class="ma-0 white--text" @click="selectPlan(plan)">SELECT</v-btn>
+                
+              </v-flex>
+            </v-card-text>
+            <v-list class="pa-0" no-action v-show="showPlanDetails">
+              <v-divider></v-divider>  
+              <template v-for="section in features">
+                <v-subheader v-if="showSectionTitle (section.features, plan.id)">{{section.title}}</v-subheader>
+                <v-list-item v-for="feature in section.features" @click="" v-if="showFeature(feature.showFor, plan.id)">
+                  <v-list-item-avatar v-show="$vuetify.breakpoint.smAndUp">
+                    <v-icon class="mr-2" color="deep-purple darken-3">{{feature.icon || 'done'}}</v-icon>
+                  </v-list-item-avatar>
+                  <v-menu open-delay="150" open-on-hover bottom offset-y offset-overflow transition="scale-transition" nudge-right="50" max-width="300" class="flex">
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-list-item-content v-bind="attrs" v-on="on">
+                        <v-list-item-title>{{feature.title}}</v-list-item-title>
+                      </v-list-item-content>
+                    </template>
+                    <v-card flat>
+                      <v-card-text>
+                        <h4 class="pink--text text--darken-2 pv-2">{{feature.title}}</h4>
+                        <v-divider class="my-2"></v-divider>
+                        <span v-html="feature.description"></span>
+                      </v-card-text>
+                    </v-card>
+                  </v-menu>
+                </v-list-item>
+              </template>
+            </v-list>
+
+          </v-card>
+        </v-row>
+        <v-row justify="center">
+          <v-card flat class="grey--text lighten-3 font-weight-light">
+            Contact us for alternative payment options
+          </v-card>
+        </v-row>
+        <v-row justify="end" :class="$vuetify.breakpoint.smAndUp?'mt-10':''">
+          <v-col>
+            <span class="text-h5 ml-4">ROI calculator</span>
+          </v-col>
+          <v-col align="right">
+            <v-select color="deep-purple" item-color="deep-purple" :items="years" item-text="label" item-value="value" v-model="calcYears" flat dense solo style="width:120px" @change="roiCalc()"></v-select>
+          </v-col>
+        </v-row>
+      </v-container>
+      <v-container>
+        <v-card elevation="4">
+          <v-card-text>
+            <v-row justify="center">
+              <v-col cols="6" sm="3"><div class="text-overline mb-4 grey--text lighten-3">COST</div><span class="card-val info--text" :class="[$vuetify.breakpoint.mdAndUp ?'':'card-val-mob']">{{cost | formatCurrency}}</span></v-col>
+              <v-col cols="6" sm="3"><div class="text-overline mb-4 grey--text lighten-3">PAYBACK</div><span class="card-val blue-grey--text" :class="[$vuetify.breakpoint.mdAndUp ?'':'card-val-mob']">{{payback}}</span><span class="card-unit blue-grey--text font-weight-thin" :class="[$vuetify.breakpoint.mdAndUp ?'':'card-unit-mob']"> {{paybackUnit}}</span></v-col>
+              <v-col cols="6" sm="3"><div class="text-overline mb-4 grey--text lighten-3">SAVING</div><span class="card-val teal--text" :class="[$vuetify.breakpoint.mdAndUp ?'':'card-val-mob']">{{savings | formatCurrency}}</span></v-col>
+              <v-col cols="6" sm="3"><div class="text-overline mb-4 grey--text lighten-3">ROI</div><span class="card-val deep-purple--text" :class="[$vuetify.breakpoint.mdAndUp ?'':'card-val-mob']">{{roi | formatPct}}</span></v-col>
+            </v-row>
+
+          </v-card-text>
+        </v-card>
+        <v-divider class="mt-4"></v-divider>
+        <v-expansion-panels v-model="panelROI" flat class="mt-4">
+          <v-expansion-panel>
+            <v-expansion-panel-header>ROI parameters</v-expansion-panel-header>
+            <v-expansion-panel-content>
+              <v-card class="mt-6" flat>
+                <v-row>
+                  <v-col sm="6" md="6" lg="10">
+                    <v-subheader class="grey--text lighten-3 mb-8 pa-0">Number of TM1 servers</v-subheader>
+                    <v-slider v-model="modelCount" step="1" persistent-hint hint="Do you have a separate model for HR, Planning, Reporting, etc.?" min="1" max="8" thumb-label="always" @change="roiCalc()"></v-slider>
+                  </v-col>
+                  <v-col>
+                    <v-subheader class="grey--text lighten-3 mb-8 pa-0">Number of environments</v-subheader>
+                    <v-slider color="light-blue" v-model="envCount" step="1" persistent-hint hint="This is your DEV, QA, TEST, PROD etc." min="1" max="8" thumb-label="always" @change="roiCalc()"></v-slider>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col sm="6" md="6" lg="10">
+                    <v-subheader class="grey--text lighten-3 mb-8 pa-0">Model complexity</i></v-subheader>
+                  <v-slider color="light-blue" v-model="modelComplexity" step="1" persistent-hint hint="1 is simple, 3 - medium, 5 complex" min="1" max="5" thumb-label="always" @change="roiCalc()"></v-slider>
+                  </v-col>
+                <v-col>
+                  <v-subheader class="grey--text lighten-3 mb-8 pa-0">Developer hourly rate</v-subheader>
+                  <v-slider v-model="devRate" step="5" persistent-hint hint="The rate varies for junior/mid/senior/architect developers" min="30" max="200" thumb-label="always" @change="roiCalc()"></v-slider>
+                </v-col>
+                </v-row>
+              <v-row>
+                <v-col>
+                  <v-subheader class="grey--text lighten-3 mb-8 pa-0">Number of users</v-subheader>
+                  <v-slider v-model="userCount" step="5" persistent-hint hint="Total number of users in PROD" min="10" max="100" thumb-label="always" @change="roiCalc()"></v-slider>
+                </v-col>
+              </v-row>
+              </v-card>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        <v-expansion-panel>
+          <v-expansion-panel-header>Savings estimates</v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <template v-for="item in costBreakdown">
+              <v-divider class="my-3"></v-divider>
+              <p class="text-overline mb-4 grey--text lighten-3">{{item.title}}</p>
+              <div>
+                <span class="text-h4 font-weight-thin pa-4 deep-purple--text text-decoration-line-through">
+                  {{item.cost/devRate/8 | formatDays}}
+                </span>
+                <span class="text-h4 font-weight-light pa-4 info--text">
+                  {{(item.cost-item.savings)/devRate/8| formatDays}}
+                </span>
+                <span class="text-h5 font-weight-light pa-4 teal--text">
+                  +{{item.savings | formatCurrency}}
+                </span>
+              </div>
+              <p class="mt-4">{{item.description}}</p>
+            </template>
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+        </v-expansion-panels>
+      </v-container>
+    <v-card class="mb-12" flat></v-card>
+    </v-main>
+  </v-app>
+</div>
+    <script>new Vue({
+  el: '#app',
+  vuetify: new Vuetify(),
+  data () {
+    return {
+      mobileMenu: false,
+      showPlanDetails: false,
+      costBreakdown: [
+        {
+          title: 'NEW DEVELOPMENT AND CHANGES',
+          description: 'TeamOne can greatly reduce time to create new cubes, dimensions and hiearchies, security groups, processes to copy, import and export data. That allows developers to focus more on the business logic & requirements.',
+          cost: 0, savings: 0,
+        },
+        {
+          title: 'RELEASE PREPARATION AND DEPLOYMENTS',
+          description: 'From comparing environments to automating TM1 releases and running deployments in one click. You can do it easily from Google Sheets',
+          cost: 0, savings: 0,
+        },
+        {
+          title: 'TESTING AND PERFORMANCE',
+          description: 'Upgrading your infastructure or software, deploying a new release. Using TeamOne you can compare "before vs after" server performance and make sure the data is the same or the changes are expected',
+          cost: 0, savings: 0,
+        },
+        {
+          title: 'DOCUMENTATION AND KNOWLEDGE TRANSFER',
+          description: 'If following simple code convention, you get a rich formatted documentation in real time. Using TeamOne "no code" modelling makes your model fully transparent to new team members.',
+          cost: 0, savings: 0,
+        },
+        {
+          title: 'MAINTENANCE AND USER SUPPORT',
+          description: 'TeamOne notably decreases developers time on users and security management, data extracts, issue investigation and model audit. Users can leverage their spreadsheet skills and do many things without IT involvement at all.',
+          cost: 0, savings: 0,
+        }
+      ],
+      plans: [
+        {
+          id:'Individual',
+          title: 'Individual', 
+          price: '$2,500', 
+          tagline: '1 user',
+          buyLink: 'https://buy.stripe.com/3csaHOezp5p32zufZ0',
+          highlight: false, 
+        },
+        {
+          id:'Corporate',
+          title: 'Corporate', 
+          price: '$25,000', 
+          tagline: 'Unlimited users',
+          buyLink: 'https://buy.stripe.com/aEU4jq0Iz4kZ1vqbIJ',
+          highlight: true, 
+        },
+      ],
+      features: [
+        {
+          title: 'Details', 
+          features: [
+            {icon: 'mdi-account-outline', showFor: ['Individual'], title: '1 user', description: "Only the registered email account"},
+            {icon: 'mdi-account-group-outline', showFor: ['Corporate'], title: 'Unlimited users', description: "Any user with a corporate account, i.e. <b>john@yourcompany.com</b>"},
+            {icon: 'mdi-update', showFor: ['Individual', 'Corporate'], title: 'Free updates', description: "As soon as we release any updates, they are activated instantly for you. No other action is required."},
+          ]
+        },
+        {
+         title: 'Support', 
+          features:[
+            {icon: 'mdi-email-multiple-outline', hasQty: false, showFor: [ 'Individual', 'Corporate'], title: 'Email', description: "We will do our best to answer your emails <b>ASAP</b>. Please note this support is referred to any questions about TeamOne. You can buy our consultations if you need help with your TM1 models or any general TM1 questions and how-to."},
+            {icon: 'mdi-card-account-phone-outline', hasQty: false, showFor: ['Corporate'], title: 'Audio\\video calls', description: "The fastest way to answer your questions. We are available through <b>Zoom</b> and <b>Google Meet</b>."},
+            {icon: 'mdi-help-network-outline', showFor: ['Corporate'], title: '1hr consultation', description: "Consulations assume questions about your TM1 model or any general TM1 questions and how-to."},
+          ]
+        }
+      ],
+      panelROI:null,
+      panelPrice:null,
+      years: [{label: '1 year', value: 1}, {label: '2 years', value: 2}, {label: '3 years', value: 3}, {label: '4 years', value: 4}, {label: '5 years', value: 5}],
+      calcYears: 1,
+      price: 0, cost: 0, savings: 0, roi: 0,
+      dev: 0, 
+      payback: 0,
+      paybackUnit: "months",
+      licType: "Corporate",
+      calcPrice: 0,
+      calcCost: 0,
+      calcSavings: 0,
+      calcRoi: 0,
+      calcPayback: -1,
+      envCount: 3,
+      modelCount: 2,
+      devCount: 2,
+      devRate: 75,
+      userCount: 20,
+      userRate: 40,
+      complexity: ['simple', 'less than medium', 'medium', 'more than medium', 'complex'],
+      modelComplexity: 3,
+      devLevel: 1
+    }
+  },
+  watch: {
+    calcCost(val){this.setCost(val)},
+    calcSavings(val){this.setSavings(val)},
+    calcRoi(val){this.setRoi(val)},
+    calcPayback(val){this.setPayback(val)},
+  },
+  methods: {
+    selectPlan(plan){
+      this.plans.forEach(p => p.highlight=false);
+      plan.highlight=true;
+      this.licType=plan.title;
+      this.roiCalc();
+    },
+    order (plan) {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return plan.orderList
+        case 'sm': return plan.orderList
+        default: return plan.orderRow
+      }
+    },
+    showFeature (showFor, planId) {
+      return showFor.includes(planId)
+    },
+    featureQty  (featureId, planIndex) {
+      return (this.plans[planIndex].features[featureId] || {}).qty 
+    },
+    showSectionTitle (features, planId) {
+      var show = false
+      for (var i = 0; i < features.length; i++) {
+        if (features[i].showFor.includes(planId)) {show = true}
+      }
+      return show
+    },
+    roiCalc(){
+      var formatter = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD', maximumFractionDigits: 0});
+      var calcYears = this.calcYears;
+      if(this.licType == 'Corporate'){
+        var price = 25000;
+        // AVG modelCount * envCount * modelComplexity hr/week
+        var calcDevHours = this.modelCount * Math.sqrt(this.envCount) * this.modelComplexity*Math.sqrt(this.modelComplexity) * 52;
+        // AVG 1hr/week per user
+        var calcUserHours = this.userCount<15?this.userCount*78:(8*78 + Math.sqrt(this.userCount)*78);
+        var calcCostManual = (calcDevHours * this.devRate + calcUserHours * this.userRate) * calcYears;
+        var calcCostTeamOne = price * calcYears;
+        var savings = calcCostManual - calcCostTeamOne;
+        var roi = savings / calcCostTeamOne * 100;
+      }else{
+        var price = 2500;
+        // dev hours per week * 52
+        var calcDevHours = Math.sqrt(this.modelCount) * Math.sqrt(Math.sqrt(this.envCount)) * Math.sqrt(this.modelComplexity) * 52;
+        // a dev spends 1.5hr per user anually
+        var calcUserHours = 1.5 * this.userCount;
+        var calcCostManual = this.devRate * (calcDevHours + calcUserHours) * calcYears;
+        var calcCostTeamOne = price * calcYears;
+        var savings = calcCostManual - calcCostTeamOne;
+        var roi = savings / calcCostTeamOne * 100;
+      }
+      var payback = Math.ceil(12*calcCostTeamOne/calcCostManual);
+      var val = calcDevHours * this.devRate * calcYears;
+      this.costBreakdown[0]['cost'] = val * 0.5;
+      this.costBreakdown[0]['savings'] = val * 0.5 * 0.4;
+      this.costBreakdown[1]['cost'] = val * 0.15;
+      this.costBreakdown[1]['savings'] = val * 0.15 * 0.5;
+      this.costBreakdown[2]['cost'] = val * 0.1;
+      this.costBreakdown[2]['savings'] = val * 0.1 * 0.7;
+      this.costBreakdown[3]['cost'] = val * 0.2;
+      this.costBreakdown[3]['savings'] = val * 0.2 * 0.8;
+      val = calcUserHours * this.userRate * calcYears;
+      this.costBreakdown[4]['cost'] = val;
+      this.costBreakdown[4]['savings'] = val * 0.75;
+      //alert(payback);
+      this.calcCost = price * this.calcYears;
+      this.calcSavings = savings;
+      this.calcPayback = payback;
+      this.paybackUnit = payback==1?'month':'months';
+      this.calcRoi = roi;
+      
+      /*
+      this.cost = formatter.format(cost);
+      this.savings = formatter.format(savings);
+      this.paybackPeriod = paybackPeriod;
+      this.roi = roi+" %";
+      */
+    },
+    setCost(val){
+      const obj = { n: this.cost }
+      anime({
+        targets: obj, n: val, round: 1, duration: 300, easing: 'linear',
+        update: () => {this.cost = obj.n}
+      })
+    },
+    setPayback(val){
+      const obj = { n: this.payback }
+      anime({
+        targets: obj, n: val, round: 1, duration: 300, easing: 'linear',
+        update: () => {this.payback = obj.n}
+      })
+    },
+    setSavings(val){
+      const obj = { n: this.savings }
+      anime({
+        targets: obj, n: val, round: 1, duration: 300, easing: 'linear',
+        update: () => {this.savings = obj.n}
+      })
+    },
+    setRoi(val){
+      const obj = { n: this.roi }
+      anime({
+        targets: obj, n: val, round: 1, duration: 300, easing: 'linear',
+        update: () => {this.roi = obj.n}
+      })
+    },
+  },
+  filters: {
+    formatCurrency(val){
+      var formatter = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD', maximumFractionDigits: 0});
+      return formatter.format(val)
+    },
+    formatPct(val){
+      return val.toLocaleString("en-US") + ' %'
+    },
+    formatDays(val){
+      return Math.ceil(val) + ' days'
+    }
+  },
+  mounted () {
+    //console.clear();
+    //setTimeout(this.roiCalc(),100);
+    this.roiCalc();
+  }
+})</script>
     
   </body>
 </html>
