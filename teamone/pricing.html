@@ -319,7 +319,7 @@
     calcCost(val){this.setCost(val)},
     calcSavings(val){this.setSavings(val)},
     calcRoi(val){this.setRoi(val)},
-    calcPayback(val,old){console.log(old,val);this.setPayback(val)},
+    calcPayback(val,old){this.setPayback(val)},
   },
   methods: {
     selectPlan(plan){
@@ -390,7 +390,6 @@
       this.calcCost = price * this.calcYears;
       this.calcSavings = savings;
       this.calcPayback = payback;
-      console.log(payback);
       this.paybackUnit = payback==1?'month':'months';
       this.calcRoi = roi;
       
