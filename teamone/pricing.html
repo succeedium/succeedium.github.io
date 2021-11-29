@@ -165,7 +165,7 @@
             <v-expansion-panel-content>
               <v-card class="mt-6" flat>
                 <v-row>
-                  <v-col sm="6" md="6" lg="10">
+                  <v-col sm="6" md="6">
                     <v-subheader class="grey--text lighten-3 mb-8 pa-0">Number of TM1 servers</v-subheader>
                     <v-slider v-model="modelCount" step="1" persistent-hint hint="Do you have a separate model for HR, Planning, Reporting, etc.?" min="1" max="8" thumb-label="always" @change="roiCalc()"></v-slider>
                   </v-col>
@@ -175,7 +175,7 @@
                   </v-col>
                 </v-row>
                 <v-row>
-                  <v-col sm="6" md="6" lg="10">
+                  <v-col sm="6" md="6">
                     <v-subheader class="grey--text lighten-3 mb-8 pa-0">Model complexity</i></v-subheader>
                   <v-slider color="light-blue" v-model="modelComplexity" step="1" persistent-hint hint="1 is simple, 3 - medium, 5 complex" min="1" max="5" thumb-label="always" @change="roiCalc()"></v-slider>
                   </v-col>
