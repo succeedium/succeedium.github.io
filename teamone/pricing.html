@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Pricing |  </title>
+    <title>Pricing | TeamOne</title>
     <meta name="description" content="TeamOne IBM Planning Analytics add-on for Google Sheets">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
@@ -93,7 +93,6 @@
             Would you like to get TeamOne for <b>FREE</b>? Fill out our license request form and install TeamOne add-on directly from <i>Google Workspace Marketplace</i>. Contact us if you want to extend your trial period or have any questions.
             <template v-slot:actions>
             <v-btn text color="deep-purple accent-4" href="https://forms.gle/wJRhRd57YknVmBPfA">Free license</v-btn>
-            <v-spacer></v-spacer>
             <v-btn text color="deep-purple accent-4" href="https://workspace.google.com/marketplace/app/teamone/112725458607">Install TeamOne</v-btn>
           </template>
         </v-banner>
@@ -108,10 +107,11 @@
                 </v-btn></v-flex>
               <v-flex mt-1 v-show="$vuetify.breakpoint.smAndUp">{{plan.tagline}}</v-flex>
               <v-flex pa-0 class="ip-plan-price info--text font-weight-light">{{plan.price}}</v-flex>
-              <v-flex pa-0 class="grey--text">USD / year</v-flex>
+              <v-flex v-if="plan.id!='Corporate'" pa-0 class="grey--text">USD / year</v-flex>
+              <v-flex v-else pa-0>&nbsp;</v-flex>
               <v-flex pa-0 mt-4>
                 <v-btn v-if="plan.highlight" depressed large color="deep-purple" class="ma-0 white--text" :href="plan.buyLink" target="_blank">BUY</v-btn>
-                <v-btn outlined v-else="!plan.highlight" depressed large color="deep-purple" class="ma-0 white--text" @click="selectPlan(plan)">SELECT</v-btn>
+                <v-btn outlined v-else="!plan.highlight" depressed large color="deep-purple" class="ma-0 white--text" href="https://succeedium.com/teamone/contact">Contact us</v-btn>
                 
               </v-flex>
             </v-card-text>
@@ -131,7 +131,7 @@
                     </template>
                     <v-card flat>
                       <v-card-text>
-                        <h4 class="pink--text text--darken-2 pv-2">{{feature.title}}</h4>
+                        <h4 class="deep-purple--text text--darken-2 pv-2">{{feature.title}}</h4>
                         <v-divider class="my-2"></v-divider>
                         <span v-html="feature.description"></span>
                       </v-card-text>
@@ -182,7 +182,7 @@
                   </v-col>
                   <v-col>
                     <v-subheader class="grey--text lighten-3 mb-8 pa-0">Number of environments</v-subheader>
-                    <v-slider color="light-blue" v-model="envCount" step="1" persistent-hint hint="This is your DEV, QA, TEST, PROD etc." min="1" max="8" thumb-label="always" @change="roiCalc()"></v-slider>
+                    <v-slider color="light-blue" v-model="envCount" step="1" persistent-hint hint="This is your DEV, QA, TEST, PROD etc." min="1" max="6" thumb-label="always" @change="roiCalc()"></v-slider>
                   </v-col>
                 </v-row>
                 <v-row>
@@ -250,13 +250,13 @@
           cost: 0, savings: 0,
         },
         {
-          title: 'TESTING AND PERFORMANCE',
+          title: 'VALIDATION AND TESTING',
           description: 'Upgrading your infastructure or software, deploying a new release. Using TeamOne you can compare "before vs after" server performance and make sure the data is the same or the changes are expected',
           cost: 0, savings: 0,
         },
         {
           title: 'DOCUMENTATION AND KNOWLEDGE TRANSFER',
-          description: 'If following simple code convention, you get a rich formatted documentation in real time. Using TeamOne "no code" modelling makes your model fully transparent to new team members.',
+          description: 'Following simple code convention, you get a rich formatted documentation in real time. Using TeamOne "no code" modelling makes your model fully transparent to new team members.',
           cost: 0, savings: 0,
         },
         {
@@ -267,37 +267,40 @@
       ],
       plans: [
         {
-          id:'Individual',
-          title: 'Individual', 
-          price: '$2,500', 
-          tagline: '1 user',
+          id:'Team',
+          title: 'Team', 
+          price: '$25,000', 
+          tagline: 'Up to 25 users',
           buyLink: 'https://buy.stripe.com/3csaHOezp5p32zufZ0',
-          highlight: false, 
+          highlight: true, 
         },
         {
           id:'Corporate',
-          title: 'Corporate', 
-          price: '$25,000', 
-          tagline: 'Unlimited users',
+          title: 'Enterprise', 
+          price: 'Get a qoute', 
+          tagline: 'Unlimited users, advanced support',
           buyLink: 'https://buy.stripe.com/aEU4jq0Iz4kZ1vqbIJ',
-          highlight: true, 
+          highlight: false, 
         },
       ],
       features: [
         {
           title: 'Details', 
           features: [
-            {icon: 'mdi-account-outline', showFor: ['Individual'], title: '1 user', description: "Only the registered email account"},
+            {icon: 'mdi-account-outline', showFor: ['Team'], title: 'Up to 25 users', description: "Only the registered email account"},
             {icon: 'mdi-account-group-outline', showFor: ['Corporate'], title: 'Unlimited users', description: "Any user with a corporate account, i.e. <b>john@yourcompany.com</b>"},
-            {icon: 'mdi-update', showFor: ['Individual', 'Corporate'], title: 'Free updates', description: "As soon as we release any updates, they are activated instantly for you. No other action is required."},
+            {icon: 'mdi-update', showFor: ['Team', 'Corporate'], title: 'Free updates', description: "As soon as we release any updates, they are activated instantly for you. No other action is required."},
           ]
         },
         {
          title: 'Support', 
           features:[
-            {icon: 'mdi-email-multiple-outline', hasQty: false, showFor: [ 'Individual', 'Corporate'], title: 'Email', description: "We will do our best to answer your emails <b>ASAP</b>. Please note this support is referred to any questions about TeamOne. You can buy our consultations if you need help with your TM1 models or any general TM1 questions and how-to."},
-            {icon: 'mdi-card-account-phone-outline', hasQty: false, showFor: ['Corporate'], title: 'Audio\\video calls', description: "The fastest way to answer your questions. We are available through <b>Zoom</b> and <b>Google Meet</b>."},
-            {icon: 'mdi-help-network-outline', showFor: ['Corporate'], title: '1hr consultation', description: "Consulations assume questions about your TM1 model or any general TM1 questions and how-to."},
+            {icon: 'mdi-calendar-month-outline', hasQty: false, showFor: [ 'Team'], title: '2-4 business days', description: "Though in most cases we will get back to you within 48 hours, our response window is up to 4 business days"},
+            {icon: 'mdi-clock-fast', hasQty: false, showFor: [ 'Corporate'], title: '24 hours', description: "We will start looking into your issue within 24 hours"},
+            {icon: 'mdi-email-multiple-outline', hasQty: false, showFor: [ 'Team', 'Corporate'], title: 'Email', description: "We will do our best to answer your emails <b>ASAP</b>. Please note this support is referred to any questions about TeamOne. You can buy our consultations if you need help with your TM1 models or any general TM1 questions and how-to."},
+            {icon: 'mdi-card-account-phone-outline', hasQty: false, showFor: ['Team','Corporate'], title: 'Audio\\video calls', description: "The fastest way to answer your questions. We are available through <b>Zoom</b> and <b>Google Meet</b>."},
+            {icon: 'mdi-help-network-outline', showFor: ['Corporate'], title: '2 consultations', description: "Consultations assume questions about your TM1 model or any general TM1 questions and how-to. Each consultation is 1 hour."},
+            {icon: 'mdi-account-school-outline', showFor: ['Corporate'], title: '2 training sessions', description: "We will provide 2 training sessions where we will cover TeamOne functionality, best practices and how to apply it to your specific needs"},
           ]
         }
       ],
@@ -305,11 +308,11 @@
       panelPrice:null,
       years: [{label: '1 year', value: 1}, {label: '2 years', value: 2}, {label: '3 years', value: 3}, {label: '4 years', value: 4}, {label: '5 years', value: 5}],
       calcYears: 1,
-      price: 0, cost: 25000, savings: 84113, roi: 336,
+      price: 0, cost: 0, savings: 0, roi: 0,
       dev: 0, 
-      payback: 3,
+      payback: 0,
       paybackUnit: "months",
-      licType: "Corporate",
+      licType: "Team",
       calcPrice: 0,
       calcCost: 0,
       calcSavings: 0,
@@ -362,40 +365,38 @@
     roiCalc(){
       var formatter = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD', maximumFractionDigits: 0});
       var calcYears = this.calcYears;
-      if(this.licType == 'Corporate'){
-        var price = 25000;
-        // AVG modelCount * envCount * modelComplexity hr/week
-        var calcDevHours = this.modelCount * Math.sqrt(this.envCount) * this.modelComplexity*Math.sqrt(this.modelComplexity) * 52;
-        // AVG 1hr/week per user
-        var calcUserHours = this.userCount<15?this.userCount*78:(8*78 + Math.sqrt(this.userCount)*78);
-        var calcCostManual = (calcDevHours * this.devRate + calcUserHours * this.userRate) * calcYears;
-        var calcCostTeamOne = price * calcYears;
-        var savings = calcCostManual - calcCostTeamOne;
-        var roi = savings / calcCostTeamOne * 100;
-      }else{
-        var price = 2500;
-        // dev hours per week * 52
-        var calcDevHours = Math.sqrt(this.modelCount) * Math.sqrt(Math.sqrt(this.envCount)) * Math.sqrt(this.modelComplexity) * 52;
-        // a dev spends 1.5hr per user anually
-        var calcUserHours = 1.5 * this.userCount;
-        var calcCostManual = this.devRate * (calcDevHours + calcUserHours) * calcYears;
-        var calcCostTeamOne = price * calcYears;
-        var savings = calcCostManual - calcCostTeamOne;
-        var roi = savings / calcCostTeamOne * 100;
-      }
+      var price = 25000;
+      // dev hours per week * 52
+      var calcDevHours = 
+        (this.modelCount + 1 - Math.sqrt(this.modelCount))
+        * (Math.sqrt(this.envCount*4))
+        * (this.modelComplexity + 1 - Math.sqrt(this.modelComplexity)) * 2 * 52;
+      // a dev spends 1.5hr per user anually
+      //var calcUserHours = this.userCount<15?this.userCount*86:(8*86 + Math.sqrt(this.userCount)*86);
+      var calcUserHours = (this.userCount + Math.sqrt(this.userCount*2)) *30;
+      var calcCostManual = (calcDevHours * this.devRate + calcUserHours * this.userRate) * calcYears;
+      var calcCostTeamOne = price * calcYears;
+      var savings = calcCostManual - calcCostTeamOne;
+      var roi = savings / calcCostTeamOne * 100;
       var payback = Math.ceil(12*calcCostTeamOne/calcCostManual);
       var val = calcDevHours * this.devRate * calcYears;
-      this.costBreakdown[0]['cost'] = val * 0.5;
-      this.costBreakdown[0]['savings'] = val * 0.5 * 0.4;
-      this.costBreakdown[1]['cost'] = val * 0.15;
-      this.costBreakdown[1]['savings'] = val * 0.15 * 0.5;
-      this.costBreakdown[2]['cost'] = val * 0.1;
-      this.costBreakdown[2]['savings'] = val * 0.1 * 0.7;
-      this.costBreakdown[3]['cost'] = val * 0.2;
-      this.costBreakdown[3]['savings'] = val * 0.2 * 0.8;
+      // DEV and CHANGES`
+      this.costBreakdown[0]['cost'] = val * 0.74;
+      this.costBreakdown[0]['savings'] = val * 0.74 * 0.62;
+      // DEPLOYMENTS
+      this.costBreakdown[1]['cost'] = val * 0.28;
+      this.costBreakdown[1]['savings'] = val * 0.28 * 0.67;
+      // TESTING
+      this.costBreakdown[2]['cost'] = val * 0.17;
+      this.costBreakdown[2]['savings'] = val * 0.17 * 0.7;
+      // DOC
+      this.costBreakdown[3]['cost'] = val * 0.24;
+      this.costBreakdown[3]['savings'] = val * 0.24 * 0.8;
       val = calcUserHours * this.userRate * calcYears;
-      this.costBreakdown[4]['cost'] = val;
-      this.costBreakdown[4]['savings'] = val * 0.75;
+      // MAINTENANCE and SUPPORT
+      this.costBreakdown[4]['cost'] = val * 0.9;
+      this.costBreakdown[4]['savings'] = val * 0.9 * 0.72;
+      
       this.calcCost = price * this.calcYears;
       this.calcSavings = savings;
       this.calcPayback = payback;
@@ -447,7 +448,7 @@
   },
   mounted () {
     //console.clear();
-    this.roiCalc();
+    setTimeout(()=>{this.roiCalc()},100);
   }
 })</script>
     
