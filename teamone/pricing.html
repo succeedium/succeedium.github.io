@@ -270,7 +270,7 @@
           id:'Team',
           title: 'Team', 
           price: '$25,000', 
-          tagline: 'Up to 25 users',
+          tagline: 'Unlimited users',
           buyLink: 'https://buy.stripe.com/3csaHOezp5p32zufZ0',
           highlight: true, 
         },
@@ -278,7 +278,7 @@
           id:'Corporate',
           title: 'Enterprise', 
           price: 'Get a qoute', 
-          tagline: 'Unlimited users, advanced support',
+          tagline: 'Support, training, consulting',
           buyLink: 'https://buy.stripe.com/aEU4jq0Iz4kZ1vqbIJ',
           highlight: false, 
         },
@@ -287,20 +287,19 @@
         {
           title: 'Details', 
           features: [
-            {icon: 'mdi-account-outline', showFor: ['Team'], title: 'Up to 25 users', description: "Only the registered email account"},
-            {icon: 'mdi-account-group-outline', showFor: ['Corporate'], title: 'Unlimited users', description: "Any user with a corporate account, i.e. <b>john@yourcompany.com</b>"},
-            {icon: 'mdi-update', showFor: ['Team', 'Corporate'], title: 'Free updates', description: "As soon as we release any updates, they are activated instantly for you. No other action is required."},
+            {icon: 'mdi-account-group-outline', showFor: ['Team', 'Corporate'], title: 'Unlimited users', description: 'Any user with a corporate account (i.e. <b>john@yourcompany.com</b>) can access TeamOne'},
+            {icon: 'mdi-update', showFor: ['Team', 'Corporate'], title: 'Free updates', description: 'As soon as we release any updates, they are activated instantly for you. No other action is required.'},
           ]
         },
         {
          title: 'Support', 
           features:[
-            {icon: 'mdi-calendar-month-outline', hasQty: false, showFor: [ 'Team'], title: '2-4 business days', description: "Though in most cases we will get back to you within 48 hours, our response window is up to 4 business days"},
-            {icon: 'mdi-clock-fast', hasQty: false, showFor: [ 'Corporate'], title: '24 hours', description: "We will start looking into your issue within 24 hours"},
-            {icon: 'mdi-email-multiple-outline', hasQty: false, showFor: [ 'Team', 'Corporate'], title: 'Email', description: "We will do our best to answer your emails <b>ASAP</b>. Please note this support is referred to any questions about TeamOne. You can buy our consultations if you need help with your TM1 models or any general TM1 questions and how-to."},
-            {icon: 'mdi-card-account-phone-outline', hasQty: false, showFor: ['Team','Corporate'], title: 'Audio\\video calls', description: "The fastest way to answer your questions. We are available through <b>Zoom</b> and <b>Google Meet</b>."},
-            {icon: 'mdi-help-network-outline', showFor: ['Corporate'], title: 'TM1 consultations', description: "Consultations assume questions about your TM1 model or any general TM1 questions and how-to. Each consultation is 1 hour."},
-            {icon: 'mdi-account-school-outline', showFor: ['Corporate'], title: 'TeamOne training sessions', description: "We will provide training sessions where we will cover TeamOne functionality, best practices and how to apply it to your specific needs"},
+            {icon: 'mdi-calendar-month-outline', hasQty: false, showFor: [ 'Team'], title: '2-4 business days', description: 'Though in most cases we will get back to you within 48 hours, our response window is up to 4 business days'},
+            {icon: 'mdi-clock-fast', hasQty: false, showFor: [ 'Corporate'], title: '24 hours', description: 'We will start looking into your issue within 24 hours'},
+            {icon: 'mdi-email-multiple-outline', hasQty: false, showFor: [ 'Team', 'Corporate'], title: 'Email', description: 'We will do our best to answer your emails <b>ASAP</b>. Please note this support is referred to any questions about TeamOne. You can buy our consultations if you need help with your TM1 models or any general TM1 questions and how-to.'},
+            {icon: 'mdi-card-account-phone-outline', hasQty: false, showFor: ['Team','Corporate'], title: 'Audio\\video calls', description: 'The fastest way to answer your questions. We are available through <b>Zoom</b> and <b>Google Meet</b>.'},
+            {icon: 'mdi-account-school-outline', showFor: ['Corporate'], title: 'TeamOne training', description: 'We will provide training sessions where we will cover TeamOne functionality, best practices and how to apply it to your specific needs'},
+            {icon: 'mdi-help-network-outline', showFor: ['Corporate'], title: 'TM1 consultations', description: 'Consultations assume questions about your TM1 model or any general IBM PA/TM1 questions and how-to.'},
           ]
         }
       ],
