@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as n,d as o}from"./app.4ca8b8e5.js";const y='{"title":"FAQ","description":"","frontmatter":{},"headers":[{"level":2,"title":"FAQ","slug":"faq"}],"relativePath":"faq.md","lastUpdated":1690240273710}',r={},t=o('',15),i=[t];function s(d,c,l,h,u,p){return n(),a("div",null,i)}var f=e(r,[["render",s]]);export{y as __pageData,f as default};
