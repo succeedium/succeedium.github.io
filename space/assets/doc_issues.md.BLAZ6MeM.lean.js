@@ -1,1 +1,0 @@
-import{_ as t,c as s,o,ae as r}from"./chunks/framework.D2mBP-VY.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"doc/issues.md","filePath":"doc/issues.md"}'),n={name:"doc/issues.md"};function a(i,e,l,c,p,h){return o(),s("div",null,e[0]||(e[0]=[r("",4)]))}const f=t(n,[["render",a]]);export{m as __pageData,f as default};
